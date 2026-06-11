@@ -1,0 +1,9 @@
+{
+  "appId": "com.ahnaf.focuslock",
+  "appName": "FocusLock",
+  "webDir": "www",
+  "ios": {
+    "contentInset": "automatic",
+    "backgroundColor": "#0C111D"
+  }
+}
