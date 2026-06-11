@@ -28,6 +28,11 @@ jobs:
           npx cap add ios
           npx cap sync ios
 
+      - name: Configure Info.plist permissions
+        run: |
+          /usr/libexec/PlistBuddy -c "Add :NSSpeechRecognitionUsageDescription string FocusLock converts your speech to text so you can dictate tasks to the assistant." ios/App/App/Info.plist || true
+          /usr/libexec/PlistBuddy -c "Add :NSMicrophoneUsageDescription string FocusLock uses the microphone for voice input to the assistant." ios/App/App/Info.plist || true
+
       - name: Add alarm sound to iOS bundle
         run: |
           cp siren.wav ios/App/App/siren.wav
