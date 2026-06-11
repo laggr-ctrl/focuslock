@@ -28,6 +28,17 @@ jobs:
           npx cap add ios
           npx cap sync ios
 
+      - name: Add alarm sound to iOS bundle
+        run: |
+          cp siren.wav ios/App/App/siren.wav
+          pip3 install pbxproj || pip3 install --break-system-packages pbxproj
+          python3 -c "
+          from pbxproj import XcodeProject
+          p = XcodeProject.load('ios/App/App.xcodeproj/project.pbxproj')
+          p.add_file('App/siren.wav', target_name='App', force=False)
+          p.save()
+          "
+
       - name: Generate app icons
         continue-on-error: true
         run: |
