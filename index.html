@@ -14,9 +14,15 @@
   <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Exo+2:wght@400;500;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
-    html, body { margin: 0; padding: 0; background: #0C111D; overscroll-behavior-y: none; }
+    :root {
+      --bg: #0C111D; --card: #151D2E; --card2: #1C2740; --line: rgba(255,255,255,0.07);
+      --soft: rgba(255,255,255,0.08); --soft2: rgba(255,255,255,0.14); --soft3: rgba(255,255,255,0.28);
+      --accent: #F5A524; --mint: #3FD68F; --red: #F4574D; --text: #EEF2F9; --muted: #8B99B0;
+      --bar: rgba(12,17,29,0.94); --font: 'Inter';
+    }
+    html, body { margin: 0; padding: 0; background: var(--bg); overscroll-behavior-y: none; }
   </style>
 </head>
 <body>
