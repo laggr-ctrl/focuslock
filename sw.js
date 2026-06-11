@@ -1,4 +1,4 @@
-const CACHE = "focuslock-v2";
+const CACHE = "focuslock-v3";
 const ASSETS = ["./", "./index.html", "./app.js", "./manifest.json", "./icon-192.png", "./icon-512.png", "./apple-touch-icon.png", "./wllama.wasm"];
 
 self.addEventListener("install", (e) => {
