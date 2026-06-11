@@ -18,7 +18,7 @@ jobs:
       - name: Stage web assets
         run: |
           mkdir -p www
-          cp index.html app.js manifest.json sw.js icon-192.png icon-512.png apple-touch-icon.png www/
+          cp index.html app.js manifest.json sw.js icon-192.png icon-512.png apple-touch-icon.png wllama.wasm www/
 
       - name: Install dependencies
         run: npm install
